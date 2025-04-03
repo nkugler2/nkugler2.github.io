@@ -35,19 +35,21 @@ body {
     font-size: 18px;
 }
 
-.kernel-info {
-    color: #555;
-    font-size: 14px;
-    background-color: #f1f1f1;
-    padding: 5px 10px;
-    border-radius: 3px;
-}
-
 /* Notebook Toolbar */
 .notebook-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
     padding: 10px 20px;
     background-color: #f8f8f8;
     border-bottom: 1px solid #ddd;
+}
+
+.toolbar-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
 }
 
 .toolbar-buttons button {
@@ -62,6 +64,14 @@ body {
 
 .toolbar-buttons button:hover {
     background-color: #f1f1f1;
+}
+
+.kernel-info {
+    color: #555;
+    font-size: 14px;
+    background-color: #f1f1f1;
+    padding: 5px 10px;
+    border-radius: 3px;
 }
 
 /* Notebook Cells */
@@ -316,5 +326,26 @@ p {
     
     .contact-links {
         flex-direction: column;
+    }
+}
+
+/* Responsive Design for Smaller Screens */
+/* Made to fix bug where toolbar buttons were off */
+@media (max-width: 768px) {
+    .notebook-toolbar { 
+        flex-direction: column; /* Stack toolbar items vertically */
+        align-items: flex-start; /* Align items to the left */
+        gap: 10px; /* Add spacing between sections */
+    }
+
+    .toolbar-buttons {
+        justify-content: flex-start; /* Align buttons to the left */
+        width: 100%; /* Ensure buttons take full width if needed */
+        gap: 10px; /* Add more spacing between buttons on mobile */
+    }
+
+    .kernel-info {
+        align-self: flex-start; /* Align kernel info to the left */
+        margin-top: 10px; /* Add spacing from toolbar buttons */
     }
 }

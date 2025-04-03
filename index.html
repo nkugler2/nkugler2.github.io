@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noah Kugler's Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="style.css"  rel="stylesheet" >
+    <link href="fontawesome/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <div class="jupyter-notebook">
         <div class="notebook-header">
             <div class="notebook-title">Noah Kugler's Portfolio</div>
-            <div class="kernel-info">Python 3.12 (ipykernel)</div>
+            
         </div>
         
         <div class="notebook-toolbar">
@@ -20,11 +20,14 @@
                 <button><i class="fas fa-plus"></i></button>
                 <button><i class="fas fa-cut"></i></button>
                 <button><i class="fas fa-copy"></i></button>
-                <button><i class="fas fa-paste"></i></button>
-                <button><i class="fas fa-arrow-up"></i></button>
-                <button><i class="fas fa-arrow-down"></i></button>   <!--Maybe Dark Mode Toggle? -->
-                <button><i class="fas fa-play"></i> Run</button>     <!-- Make into Run All Button -->
+                <button><i class="fa-solid fa-clipboard"></i></button>
+                <button><i class="fa-solid fa-play"></i></button>
+                <button><i class="fa-solid fa-stop"></i></button>       
+                <button><i class="fa-solid fa-rotate-right"></i></button> 
+                     
             </div>
+
+            <div class="kernel-info">Python 3.12 (ipykernel)</div>
         </div>
         
         <div class="notebook-cells">
@@ -81,8 +84,7 @@
                                     <li><strong>Local Large Language Models:</strong> 
                                         <a href="https://ollama.com" target="_blank">Ollama</a>, 
                                         <a href="https://msty.app" target="_blank">Msty</a>, 
-                                        <a href="https://lmstudio.ai" target="_blank">LM Studio</a>
-                                        
+                                        <a href="https://lmstudio.ai" target="_blank">LM Studio</a>   
                                     </li>
                                 </ul>
                                 <h3>Education</h3>
@@ -111,7 +113,7 @@
                 <div class="cell-input">
                     <div class="prompt">In [ ]:</div>
                     <div class="input-area">
-                        <pre>view_resume()</pre>
+                        <pre>display_resume()</pre>
                     </div>
                     <button class="run-button">Run</button>
                 </div>
@@ -139,7 +141,7 @@
                 <div class="cell-input">
                     <div class="prompt">In [ ]:</div>
                     <div class="input-area">
-                        <pre>show_projects()</pre>
+                        <pre>display_projects()</pre>
                     </div>
                     <button class="run-button">Run</button>
                 </div>
@@ -149,9 +151,12 @@
                         <h2>Data Analytics Projects</h2>
                         
                         <div class="project-card">
-                            <h3>Project 1: School Funding in the Spotlight</h3>
-                            <p>My first real world analytics project outside of class. Used the School Finance Indicators Database 
-                                to analyze outcome and funding gaps at different rates of IEP students. 
+                            <h3>School Funding in the Spotlight</h3>
+                            <p>Used the School Finance Indicators Database to analyze outcome and funding gaps at different rates of IEP students. Supported by 
+                                
+                                <a href="https://lib.asu.edu/data" target="_blank">The Unit for Data Science</a>
+                                
+                                 at the Arizona State University Library. 
                             </p>
                             <div class="project-links">
                                 <a href="https://github.com/nkugler2/My-First-Analytics-Adventure" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub Repository</a>
