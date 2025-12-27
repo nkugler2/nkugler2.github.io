@@ -1,268 +1,362 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Noah Kugler - Resume</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-        }
-        
-        .header {
-            text-align: center;
-            border-bottom: 2px solid #333;
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-        }
-        
-        .header h1 {
-            margin: 0;
-            font-size: 2.5em;
-            color: #2c3e50;
-        }
-        
-        .contact-info {
-            margin-top: 10px;
-            font-size: 0.9em;
-        }
-        
-        .contact-info div {
-            margin: 5px 0;
-        }
-        
-        .section {
-            margin-bottom: 30px;
-        }
-        
-        .section h2 {
-            color: #2c3e50;
-            border-bottom: 1px solid #bdc3c7;
-            padding-bottom: 5px;
-            margin-bottom: 15px;
-            font-size: 1.3em;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        .education-item, .experience-item, .leadership-item {
-            margin-bottom: 20px;
-        }
-        
+      body {
+        font-family: Arial, sans-serif;
+        line-height: 1.6;
+        color: #333;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+      }
+
+      .header {
+        text-align: center;
+        border-bottom: 2px solid #333;
+        padding-bottom: 20px;
+        margin-bottom: 30px;
+      }
+
+      .header h1 {
+        margin: 0;
+        font-size: 2.5em;
+        color: #2c3e50;
+      }
+
+      .contact-info {
+        margin-top: 10px;
+        font-size: 0.9em;
+      }
+
+      .contact-info div {
+        margin: 5px 0;
+      }
+
+      .section {
+        margin-bottom: 30px;
+      }
+
+      .section h2 {
+        color: #2c3e50;
+        border-bottom: 1px solid #bdc3c7;
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+        font-size: 1.3em;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .education-item,
+      .experience-item,
+      .leadership-item {
+        margin-bottom: 20px;
+      }
+
+      .item-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 8px;
+      }
+
+      .item-title {
+        font-weight: bold;
+        color: #34495e;
+        font-size: 0.9em;
+      }
+
+      .item-date {
+        font-style: italic;
+        color: #7f8c8d;
+        white-space: nowrap;
+        font-size: 0.9em;
+      }
+
+      .item-subtitle {
+        color: #7f8c8d;
+        font-style: italic;
+        margin-bottom: 8px;
+        font-size: 0.9em;
+      }
+
+      .item-description ul {
+        margin: 8px 0;
+        padding-left: 20px;
+        font-size: 0.9em;
+      }
+
+      .item-description li {
+        margin-bottom: 5px;
+      }
+
+      .skills-section {
+        margin-bottom: 15px;
+      }
+
+      .skills-section h3 {
+        color: #2c3e50;
+        margin-bottom: 8px;
+        font-size: 0.9em;
+      }
+
+      .skills-section p {
+        margin-bottom: 10px;
+        text-align: justify;
+        font-size: 0.9em;
+      }
+
+      @media (max-width: 600px) {
         .item-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 8px;
+          flex-direction: column;
+          align-items: flex-start;
         }
-        
-        .item-title {
-            font-weight: bold;
-            color: #34495e;
-            font-size: .9em;
-        }
-        
+
         .item-date {
-            font-style: italic;
-            color: #7f8c8d;
-            white-space: nowrap;
-            font-size: .9em;
+          margin-top: 5px;
         }
-        
-        .item-subtitle {
-            color: #7f8c8d;
-            font-style: italic;
-            margin-bottom: 8px;
-            font-size: .9em;
-        }
-        
-        .item-description ul {
-            margin: 8px 0;
-            padding-left: 20px;
-            font-size: .9em;
-        }
-        
-        .item-description li {
-            margin-bottom: 5px;
-        }
-        
-        .skills-section {
-            margin-bottom: 15px;
-        }
-        
-        .skills-section h3 {
-            color: #2c3e50;
-            margin-bottom: 8px;
-            font-size: .9em;
-        }
-        
-        .skills-section p {
-            margin-bottom: 10px;
-            text-align: justify;
-            font-size: .9em;
-        }
-        
-        @media (max-width: 600px) {
-            .item-header {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            
-            .item-date {
-                margin-top: 5px;
-            }
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <div class="container">
-        <div class="header">
-            <h1>Noah Kugler</h1>
-            <div class="contact-info">
-                <div>(631) 766-4830 | nkugler2@asu.edu</div>
-                <div>Tempe, AZ – Open to Relocation</div>
+      <div class="header">
+        <h1>Noah Kugler</h1>
+        <div class="contact-info">
+          <div>(631) 766-4830 | nkugler2@asu.edu</div>
+          <div>Tempe, AZ – Open to Relocation</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Education</h2>
+
+        <div class="education-item">
+          <div class="item-header">
+            <div class="item-title">
+              W. P. Carey School of Business, Arizona State University, Tempe,
+              AZ
             </div>
+            <div class="item-date">December 2025</div>
+          </div>
+          <div class="item-subtitle">
+            Bachelor of Science, Business Data Analytics, Summa Cum Laude, 4.0
+            GPA
+          </div>
+          <div class="item-description">
+            <ul>
+              <li>
+                Programming Analytics & AI, Problem Solving and Actionable
+                Analytics, Business Data Visualization, Introductory Applied
+                Statistics, Business Database Systems Development, Data
+                Warehousing and Dimensional Modeling, Fundamentals of Finance,
+                Global Supply Operations.
+              </li>
+            </ul>
+          </div>
         </div>
 
-        <div class="section">
-            <h2>Education</h2>
-            
-            <div class="education-item">
-                <div class="item-header">
-                    <div class="item-title">W. P. Carey School of Business, Arizona State University, Tempe, AZ</div>
-                    <div class="item-date">Expected Graduation: December 2025</div>
-                </div>
-                <div class="item-subtitle">Bachelor of Science, Business Data Analytics</div>
-                <div class="item-description">
-                    <ul>
-                        <li>Programming Analytics & AI, Problem Solving and Actionable Analytics, Business Data Visualization, Introductory Applied Statistics, Business Database Systems Development, Data Warehousing and Dimensional Modeling, Fundamentals of Finance, Global Supply Operations.</li>
-                    </ul>
-                </div>
+        <div class="education-item">
+          <div class="item-header">
+            <div class="item-title">
+              Paradise Valley Community College, Paradise Valley, AZ
             </div>
-            
-            <div class="education-item">
-                <div class="item-header">
-                    <div class="item-title">Paradise Valley Community College, Paradise Valley, AZ</div>
-                    <div class="item-date">August 2024</div>
-                </div>
-                <div class="item-subtitle">Associate in Business, General Requirements</div>
-                <div class="item-description">
-                    <ul>
-                        <li>Accounting Principles I, II, and III, Math Analysis for Business, Business Statistics, Honors Public Speaking.</li>
-                    </ul>
-                </div>
+            <div class="item-date">August 2024</div>
+          </div>
+          <div class="item-subtitle">
+            Associate in Business, General Requirements, 4.0 GPA
+          </div>
+          <div class="item-description">
+            <ul>
+              <li>
+                Accounting Principles I, II, and III, Math Analysis for
+                Business, Business Statistics, Honors Public Speaking.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Professional Experience</h2>
+
+        <div class="experience-item">
+          <div class="item-header">
+            <div class="item-title">
+              College Intern Associate - Medicaid Technology Operations, Aetna,
+              Scottsdale, AZ
             </div>
+            <div class="item-date">May 2025 – Present</div>
+          </div>
+          <div class="item-description">
+            <ul>
+              <li>
+                Performed trend analysis on 12,000+ incident tickets using
+                Excel, presenting findings to application stakeholders that
+                revealed 99% of tickets were infrastructure-specific, directly
+                supporting the organization's cloud migration timeline.
+              </li>
+              <li>
+                Orchestrated Agile project management workflow by creating
+                detailed User Stories in Rally, coordinating with application
+                development teams to define critical system thresholds, assign
+                ownership responsibilities, and establish resolution SLAs for
+                incident management.
+              </li>
+            </ul>
+          </div>
         </div>
 
-        <div class="section">
-            <h2>Professional Experience</h2>
-            
-            <div class="experience-item">
-                <div class="item-header">
-                    <div class="item-title">College Intern Associate - Medicaid Technology Operations, Aetna, Scottsdale, AZ</div>
-                    <div class="item-date">May 2025 – August 2025</div>
-                </div>
-                <div class="item-description">
-                    <ul>
-                        <li>Performed trend analysis on 12,000+ incident tickets using Excel, presenting findings to application stakeholders that revealed 99% of tickets were infrastructure-specific, directly supporting the organization's cloud migration timeline.</li>
-                        <li>Orchestrated Agile project management workflow by creating detailed User Stories in Rally, coordinating with application development teams to define critical system thresholds, assign ownership responsibilities, and establish resolution SLAs for incident management.</li>
-                    </ul>
-                </div>
+        <div class="experience-item">
+          <div class="item-header">
+            <div class="item-title">
+              Front Office Coordinator, BASIS Phoenix Primary, Phoenix, AZ
             </div>
-            
-            <div class="experience-item">
-                <div class="item-header">
-                    <div class="item-title">Front Office Coordinator, BASIS Phoenix Primary, Phoenix, AZ</div>
-                    <div class="item-date">August 2020 – May 2023</div>
-                </div>
-                <div class="item-description">
-                    <ul>
-                        <li>Managed all front office operations needed to facilitate internal operational efficiency and effectiveness.</li>
-                        <li>Built and maintained the internal database of student car tags for school drop off and pick up. Ensured data integrity and consistency through rapid changes in students' enrollments or changes to pick up/drop off procedures.</li>
-                        <li>Managed and assisted others in managing student data in PowerSchool including attendance and grades.</li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="experience-item">
-                <div class="item-header">
-                    <div class="item-title">Manager, Pump it Up, Scottsdale, AZ</div>
-                    <div class="item-date">February 2019 – March 2020</div>
-                </div>
-                <div class="item-description">
-                    <ul>
-                        <li>Managed day-to-day operations including responding to phone and email correspondence, assisting guests, ordering supplies, social media management, as well as opening and closing.</li>
-                    </ul>
-                </div>
-            </div>
+            <div class="item-date">August 2020 – May 2023</div>
+          </div>
+          <div class="item-description">
+            <ul>
+              <li>
+                Managed all front office operations needed to facilitate
+                internal operational efficiency and effectiveness.
+              </li>
+              <li>
+                Built and maintained the internal database of student car tags
+                for school drop off and pick up. Ensured data integrity and
+                consistency through rapid changes in students' enrollments or
+                changes to pick up/drop off procedures.
+              </li>
+              <li>
+                Managed and assisted others in managing student data in
+                PowerSchool including attendance and grades.
+              </li>
+            </ul>
+          </div>
         </div>
 
-        <div class="section">
-            <h2>Leadership Experience</h2>
-            
-            <div class="leadership-item">
-                <div class="item-header">
-                    <div class="item-title">Vice President, DECA, Paradise Valley Community College</div>
-                    <div class="item-date">August 2023 – May 2024</div>
-                </div>
-                <div class="item-description">
-                    <ul>
-                        <li>Recruited new members and encouraged engagement, growing active membership from 2 to 10 members.</li>
-                        <li>Communicated all administrative responsibilities between club advisors and members.</li>
-                        <li>Qualified for and placed 9th in the country at the DECA International Career Development Conference with the club President in the Business Ethics category. Assisted 7 of our club members to prepare and qualify for the competition.</li>
-                    </ul>
-                </div>
+        <div class="experience-item">
+          <div class="item-header">
+            <div class="item-title">Manager, Pump it Up, Scottsdale, AZ</div>
+            <div class="item-date">February 2019 – March 2020</div>
+          </div>
+          <div class="item-description">
+            <ul>
+              <li>
+                Managed day-to-day operations including responding to phone and
+                email correspondence, assisting guests, ordering supplies,
+                social media management, as well as opening and closing.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Leadership Experience</h2>
+          
+        
+        <div class="leadership-item">
+          <div class="item-header">
+            <div class="item-title">
+              Active Member, DECA, Arizona State University
             </div>
-            
-            <div class="leadership-item">
-                <div class="item-header">
-                    <div class="item-title">Active Member, DECA, Arizona State University</div>
-                    <div class="item-date">September 2024 – Present</div>
-                </div>
-            </div>
-            
-            <div class="leadership-item">
-                <div class="item-header">
-                    <div class="item-title">Active Member, Department of Information Systems Club, Arizona State University</div>
-                    <div class="item-date"></div>
-                </div>
-            </div>
+            <div class="item-date">September 2024 – December 2025</div>
+          </div>
         </div>
 
-        <div class="section">
-            <h2>Skills & Activities</h2>
-            
-            <div class="skills-section">
-                <h3>Computer Skills:</h3>
-                <p>Proficient in Microsoft Office, PowerSchool SIS, POS management, PC building, Raptor Security, social media management with Social Pilot. Basic graphic design with Canva, Local AI with Ollama. Agile Project Management using Rally. Incident Ticket tracking and management with Service Now. Tableau for dashboard creation.</p>
+        <div class="leadership-item">
+          <div class="item-header">
+            <div class="item-title">
+              Active Member, Department of Information Systems Club, Arizona
+              State University
             </div>
-            
-            <div class="skills-section">
-                <h3>Technical Skills:</h3>
-                <p>Python for Data Analysis, Pandas, NumPy, yfinance, conda, SQLite. Excel for Data Analysis. Basic SPSS. SQL, Microsoft SQL Server, Basic ETL, relational DB, data warehouses, and data lakes. Local and Cloud AI for Data Analysis. Git for Version control. Agile Development Methodology for IT Project Management.</p>
-            </div>
-            
-            <div class="skills-section">
-                <h3>Open Research:</h3>
-                <p>Consumer Voice and Education in the Spotlight Open Data Projects at the Data Science and Analytics Unit at the Hayden Library at ASU.</p>
-            </div>
-            
-            <div class="skills-section">
-                <h3>Volunteering:</h3>
-                <p>Voluntary Income Tax Assistance program, Feed My Starving Children.</p>
-            </div>
-            
-            <div class="skills-section">
-                <h3>Interests:</h3>
-                <p>Music Production, Local AI, Personal Knowledge Management with Obsidian, Educational Research on Pedagogy, Educational Data Analytics, Information System Development, staying current with evolving technologies.</p>
-            </div>
+            <div class="item-date"></div>
+          </div>
         </div>
+
+        <div class="leadership-item">
+          <div class="item-header">
+            <div class="item-title">
+              Vice President, DECA, Paradise Valley Community College
+            </div>
+            <div class="item-date">August 2023 – May 2024</div>
+          </div>
+          <div class="item-description">
+            <ul>
+              <li>
+                Recruited new members and encouraged engagement, growing active
+                membership from 2 to 10 members.
+              </li>
+              <li>
+                Communicated all administrative responsibilities between club
+                advisors and members.
+              </li>
+              <li>
+                Qualified for and placed 9th in the country at the DECA
+                International Career Development Conference with the club
+                President in the Business Ethics category. Assisted 7 of our
+                club members to prepare and qualify for the competition.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        
+      <div class="section">
+        <h2>Skills & Activities</h2>
+
+        <div class="skills-section">
+          <h3>Computer Skills:</h3>
+          <p>
+            Proficient in Microsoft Office, PowerSchool SIS, POS management, PC
+            building, Raptor Security, social media management with Social
+            Pilot. Basic graphic design with Canva, Local AI with Ollama. Agile
+            Project Management using Rally. Incident Ticket tracking and
+            management with Service Now. Tableau for dashboard creation.
+          </p>
+        </div>
+
+        <div class="skills-section">
+          <h3>Technical Skills:</h3>
+          <p>
+            Python for Data Analysis, Pandas, NumPy, yfinance, conda, SQLite.
+            Excel for Data Analysis. Basic SPSS. SQL, Microsoft SQL Server,
+            Basic ETL, relational DB, data warehouses, and data lakes. Local and
+            Cloud AI for Data Analysis. Git for Version control. Agile
+            Development Methodology for IT Project Management.
+          </p>
+        </div>
+
+        <div class="skills-section">
+          <h3>Open Research:</h3>
+          <p>
+            Consumer Voice and Education in the Spotlight Open Data Projects at
+            the Data Science and Analytics Unit at the Hayden Library at ASU.
+          </p>
+        </div>
+
+        <div class="skills-section">
+          <h3>Volunteering:</h3>
+          <p>
+            Voluntary Income Tax Assistance program, Feed My Starving Children.
+          </p>
+        </div>
+
+        <div class="skills-section">
+          <h3>Interests:</h3>
+          <p>
+            Music Production, Local AI, Personal Knowledge Management with
+            Obsidian, Educational Research on Pedagogy, Educational Data
+            Analytics, Information System Development, staying current with
+            evolving technologies.
+          </p>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
+
